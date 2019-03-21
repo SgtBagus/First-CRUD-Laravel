@@ -16,3 +16,8 @@ Route::get('/', function () {
 });
 
 Route::resource('shares', 'ShareController');
+Route::resource('image', 'ImageController');
+Route::post('image', 'UploadImageController@upload')->name('upload.image');
+
+Route::get('photo', 'PhotoController@index')->name('photo.index');
+Route::post('photo', 'PhotoController@uploadImage');
